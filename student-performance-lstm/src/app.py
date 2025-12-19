@@ -14,7 +14,8 @@ st.set_page_config(page_title='Student Performance Predictor', layout='wide')
 st.title('Student Performance Prediction - LSTM + Baselines')
 
 # --- Model selection ---
-models_dir = 'models'
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+MODEL_DIR = os.path.join(BASE_DIR, "models")
 available_models = []
 exclude_files = {'encoders.joblib', 'scaler.joblib', 'metadata.joblib', 'metadata.json'}
 if os.path.exists(models_dir):
@@ -26,8 +27,8 @@ if os.path.exists(models_dir):
 if not available_models:
     st.warning('No models found in models/. Please train or add model files.')
 model_choice = st.selectbox('Choose model', available_models) if available_models else None
-model_path = os.path.join(models_dir, model_choice) if model_choice else None
-scaler_path = os.path.join(models_dir, 'scaler.joblib')
+model_path = os.path.join(MODEL_DIR, "lstm_model.h5")
+scaler_path = os.path.join(MODEL_DIR, "scaler.pkl")
 encoders_path = os.path.join(models_dir, 'encoders.joblib')
 
 # --- Metadata loading ---
