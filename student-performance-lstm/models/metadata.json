@@ -1,0 +1,24 @@
+{
+  "base_cols": [
+    "Năm sinh",
+    "Điểm đầu vào",
+    "Độ hài lòng với trường (0,1)",
+    "Bệnh trầm cảm (0,1)",
+    "Tăng giảm chú ý (0,1)",
+    "Hoàn cảnh gia đình (0-Nghèo,1-Trung lưu,2-Khá giả)",
+    "Tín chỉ đăng ký HK1",
+    "Tín chỉ rớt HK1",
+    "Số môn rớt HK1"
+  ],
+  "cat_cols": [
+    "Giới tính",
+    "Xếp loại học lực"
+  ],
+  "seq_cols": [
+    "Điểm TB HK1 (hệ 10)",
+    "Điểm TB HK1 (hệ 4)"
+  ],
+  "feature_prefixes": [
+    "Điểm TB HK"
+  ]
+}
