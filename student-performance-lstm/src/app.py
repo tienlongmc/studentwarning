@@ -8,7 +8,7 @@ import os
 import matplotlib.pyplot as plt
 from tensorflow.keras.models import load_model
 from data_loader import load_csv, prepare_sequences_for_prediction
-from src.utils import evaluate_binary, plot_roc, plot_precision_recall, plot_confusion, plot_training_history
+from utils import evaluate_binary, plot_roc, plot_precision_recall, plot_confusion, plot_training_history
 
 st.set_page_config(page_title='Student Performance Predictor', layout='wide')
 st.title('Student Performance Prediction - LSTM + Baselines')
